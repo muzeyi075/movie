@@ -1,7 +1,8 @@
-import { allMovies, movies, trending } from "@/lib/catalog";
+import { getCatalog, searchCatalog } from "@/lib/catalog-store";
 
 export async function GET(request) {
-  const query = new URL(request.url).searchParams.get("q")?.trim().toLowerCase() ?? "";
-  const results = query ? allMovies.filter((movie) => `${movie.title} ${movie.genre || movie.category} ${movie.categories.join(" ")}`.toLowerCase().includes(query)) : movies;
-  return Response.json({ movies: results, trending });
+  const params = new URL(request.url).searchParams;
+  const query = params.get("q") ?? ""; const category = params.get("category") ?? "";
+  const catalog = await getCatalog(); const results = await searchCatalog(query, category);
+  return Response.json({ movies: results, total: results.length, trending: catalog.slice(-3).reverse() });
 }
