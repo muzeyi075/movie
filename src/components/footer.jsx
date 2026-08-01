@@ -1,0 +1,5 @@
+import Link from "next/link";
+
+export default function Footer() {
+  return <footer className="site-footer"><div className="footer-main"><div className="footer-brand"><Link className="brand" href="/"><span className="brand-mark">C</span>CINEMORA</Link><p>Stories worth staying in for. Stream beautifully, wherever you are.</p></div><div className="footer-links"><div><b>Browse</b><Link href="/discover">Discover</Link><Link href="/my-list">My List</Link><Link href="/premium">Premium</Link></div><div><b>Account</b><Link href="/profile">Profile</Link><Link href="/profile">Preferences</Link><Link href="/profile">Help center</Link></div><div><b>Follow</b><a href="https://x.com" target="_blank" rel="noreferrer">X / Twitter</a><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a><a href="https://youtube.com" target="_blank" rel="noreferrer">YouTube</a></div></div></div><div className="footer-bottom"><span>© 2026 Cinemora. All rights reserved.</span><div><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/cookies">Cookies</Link></div></div></footer>;
+}

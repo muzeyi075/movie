@@ -1,0 +1,7 @@
+.site-footer { margin-left:252px; padding:58px 4.8vw 27px; color:#999aa0; background:#121214; border-top:1px solid var(--line); }
+.footer-main { display:flex; justify-content:space-between; gap:60px; max-width:1280px; margin:0 auto; }
+.footer-brand { max-width:270px; }.footer-brand .brand { padding:0; }.footer-brand p { font-size:12px; line-height:1.7; margin:15px 0 0; }
+.footer-links { display:flex; gap:clamp(36px,7vw,100px); }.footer-links div { display:grid; align-content:start; gap:11px; }.footer-links b { margin-bottom:3px; color:#eee; font-size:12px; }.footer-links a,.footer-bottom a { color:#999aa0; text-decoration:none; font-size:12px; }.footer-links a:hover,.footer-bottom a:hover { color:#fff; }
+.footer-bottom { display:flex; justify-content:space-between; gap:20px; max-width:1280px; margin:45px auto 0; padding-top:20px; border-top:1px solid var(--line); font-size:11px; }.footer-bottom div { display:flex; gap:19px; }
+@media (max-width:1000px) { .site-footer { margin-left:200px; } }
+@media (max-width:760px) { .site-footer { margin-left:0; padding:42px 18px 90px; }.footer-main { display:grid; gap:32px; }.footer-links { gap:0; justify-content:space-between; }.footer-bottom { display:grid; gap:12px; margin-top:35px; }.footer-bottom div { gap:15px; } }
