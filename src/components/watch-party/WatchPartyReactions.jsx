@@ -1,0 +1,3 @@
+"use client";
+const reactions = ["❤️", "😂", "🔥", "😱", "👏", "😮"];
+export default function WatchPartyReactions({ onReact, floating }) { return <section className="party-reactions"><div className="party-panel-title"><span>Reactions</span><small>in the moment</small></div><div className="reaction-buttons">{reactions.map((reaction) => <button key={reaction} type="button" onClick={() => onReact(reaction)} aria-label={`Send ${reaction}`}>{reaction}</button>)}</div><div className="floating-reactions" aria-live="polite">{floating.map((item) => <span key={item.id}>{item.reaction}</span>)}</div></section>; }

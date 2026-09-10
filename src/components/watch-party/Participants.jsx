@@ -1,0 +1,2 @@
+"use client";
+export default function Participants({ participants = [], userId }) { return <section className="party-participants"><div className="party-panel-title"><span>Watching now</span><small>{participants.length} {participants.length === 1 ? "viewer" : "viewers"}</small></div><div className="participant-list">{participants.map((participant) => <div className="participant" key={participant.userId}><span className="participant-dot"/><span>{participant.userId === userId ? "You" : participant.username}</span></div>)}</div></section>; }
